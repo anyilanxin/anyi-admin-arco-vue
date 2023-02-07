@@ -17,9 +17,23 @@
     @cancel="cancel"
   >
     <template #title> {{ $t('settings.title') }} </template>
-    <div class="mix">
-      <div class="mix-sidebar"></div>
+    <a-divider orientation="center">主题</a-divider>
+    <div class="anyi-dark-check-switch">
+      <a-switch
+        v-model="theme"
+        checked-value="light"
+        unchecked-value="dark"
+        @change="handleToggleTheme"
+      >
+        <template #checked>
+          <AnYiSvgIcon name="icon-system-sun" class-name="anyi-dark-check" />
+        </template>
+        <template #unchecked>
+          <AnYiSvgIcon name="icon-system-moon" class-name="anyi-dark-check" />
+        </template>
+      </a-switch>
     </div>
+
     <a-divider orientation="center">导航栏模式</a-divider>
     <TypePicker />
     <a-divider orientation="center">系统主题</a-divider>
@@ -46,7 +60,7 @@
   import { computed } from 'vue';
   import { Message } from '@arco-design/web-vue';
   import { useI18n } from 'vue-i18n';
-  import { useClipboard } from '@vueuse/core';
+  import { useClipboard, useDark, useToggle } from '@vueuse/core';
   import { useAppStore } from '@/store';
   import Block from './block.vue';
   import TypePicker from './TypePicker.vue';
@@ -60,6 +74,21 @@
   const { t } = useI18n();
   const { copy } = useClipboard();
   const visible = computed(() => appStore.globalSettings);
+  const theme = computed(() => appStore.theme);
+  const isDark = useDark({
+    selector: 'body',
+    attribute: 'arco-theme',
+    valueDark: 'dark',
+    valueLight: 'light',
+    storageKey: 'arco-theme',
+    onChanged(dark: boolean) {
+      appStore.toggleTheme(dark);
+    },
+  });
+  const toggleTheme = useToggle(isDark);
+  const handleToggleTheme = () => {
+    toggleTheme();
+  };
   const screenOpts = computed(() => [
     // { name: '分割菜单', key: 'splitMenu', defaultVal: appStore.splitMenu },
     // {
@@ -335,6 +364,12 @@
     svg {
       font-size: 18px;
       vertical-align: -4px;
+    }
+  }
+  .anyi-dark-check-switch {
+    text-align: center;
+    .anyi-dark-check {
+      vertical-align: -0.16em !important;
     }
   }
 </style>
