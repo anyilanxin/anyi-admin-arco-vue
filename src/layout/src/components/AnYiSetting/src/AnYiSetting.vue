@@ -26,10 +26,10 @@
         @change="handleToggleTheme"
       >
         <template #checked>
-          <AnYiSvgIcon name="icon-system-sun" class-name="anyi-dark-check" />
+          <AnYiSvgIcon name="icon-setting-sun" class-name="anyi-dark-check" />
         </template>
         <template #unchecked>
-          <AnYiSvgIcon name="icon-system-moon" class-name="anyi-dark-check" />
+          <AnYiSvgIcon name="icon-setting-moon" class-name="anyi-dark-check" />
         </template>
       </a-switch>
     </div>
