@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnYi Admin - 开箱即用的中台前端/设计解决方案</title>
+</head>
+
+<body>
+  <script>
+    (() => {
+      var theme = window.localStorage.getItem('__APP__DARK__MODE__');
+      var html = document.documentElement;
+      if (theme && theme == 'dark') {
+        document.body.setAttribute('arco-theme', 'dark');
+        html.setAttribute('arco-theme', 'dark');
+      } else {
+        document.body.removeAttribute('arco-theme');
+        html.removeAttribute('arco-theme');
+      }
+
+      var colorGrey = window.localStorage.getItem('__APP__GREY__MODE__');
+      var html = document.documentElement;
+      if (colorGrey && colorGrey == 'grey') {
+        html.setAttribute('anyi-color-grey', 'grey');
+      } else {
+        html.removeAttribute('anyi-color-grey');
+      }
+    })();
+  </script>
+  <style>
+    html[arco-theme='dark'] {
+      background-color: #17171a;
+    }
+
+    html {
+      background-color: #fff;
+    }
+
+    /* 黑白色 */
+    html[anyi-color-grey='grey'] {
+      filter: grayscale(1);
+    }
+
+    .app-loading {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .app-loading .app-loading-wrap {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: flex;
+      transform: translate3d(-50%, -50%, 0);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    html[arco-theme='dark'] .app-loading-title {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .app-loading .app-loading-title {
+      display: flex;
+      margin-top: 90px;
+      font-size: 30px;
+      color: rgb(29, 33, 41);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .rotate-center {
+      position: absolute;
+      top: -10%;
+      width: 88px;
+      height: 88px;
+      -webkit-animation: rotate-center 1s linear infinite;
+      animation: rotate-center 1s linear infinite;
+    }
+
+    @-webkit-keyframes rotate-center {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes rotate-center {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  <div id="app">
+    <div class="app-loading">
+      <div class="app-loading-wrap">
+        <img class="rotate-center" src="./public/favicon.ico" />
+        <div class="app-loading-title">安一兰芯</div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
