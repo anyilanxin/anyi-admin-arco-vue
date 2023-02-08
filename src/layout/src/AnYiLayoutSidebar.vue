@@ -49,6 +49,7 @@
 <script lang="ts" setup>
   import { computed } from 'vue';
   import { useAppStore } from '@/store';
+  import useMenu from '@/hooks/menu';
   import useResponsive from '@/hooks/responsive';
   import { useDesign } from '@/hooks/useDesign';
   import {
@@ -65,9 +66,7 @@
   const appStore = useAppStore();
   useResponsive(true);
   const showLogo = computed(() => appStore.showLogo);
-  const menuWidth = computed(() => {
-    return appStore.collapsed ? 48 : appStore.menuWidth;
-  });
+  const { menuWidth } = useMenu();
   const collapsed = computed(() => {
     return appStore.collapsed;
   });
