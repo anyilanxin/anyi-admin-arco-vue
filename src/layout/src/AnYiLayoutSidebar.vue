@@ -14,13 +14,12 @@
         :color-background="logoColorBackground"
         :color-border="logoColorBorder"
       />
-      <a-scrollbar style="height: calc(100vh - 60px); overflow: auto">
-        <AnYiMenu
-          :class="prefixCls + '-menu'"
-          :expand-icon-down="false"
-          :expand-icon-right="false"
-        />
-      </a-scrollbar>
+      <AnYiMenu
+        style="height: calc(100vh - 60px); overflow-y: hidden"
+        :class="prefixCls + '-menu'"
+        :expand-icon-down="false"
+        :expand-icon-right="false"
+      />
     </a-layout-sider>
     <a-layout>
       <div :class="prefixCls + '-header-parent'">
