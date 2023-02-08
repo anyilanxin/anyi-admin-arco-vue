@@ -247,7 +247,7 @@
             </a-form-item>
           </a-card>
         </a-space>
-        <div class="actions">
+        <div class="actions" :style="widthStype">
           <a-space>
             <a-button>
               {{ $t('groupForm.reset') }}
@@ -263,9 +263,10 @@
 </template>
 
 <script lang="ts" setup>
-  import { ref } from 'vue';
+  import { ref, computed } from 'vue';
   import { FormInstance } from '@arco-design/web-vue/es/form';
   import useLoading from '@/hooks/loading';
+  import { useAppStore } from '@/store';
 
   const formData = ref({});
   const formRef = ref<FormInstance>();
@@ -279,6 +280,13 @@
       setLoading(false);
     }, 1000);
   };
+  const appStore = useAppStore();
+  const widthStype = computed(() => {
+    const menuWidth = appStore.collapsed ? 48 : appStore.menuWidth;
+    return {
+      width: `calc(100% - ${menuWidth}px)`,
+    };
+  });
 </script>
 
 <script lang="ts">
@@ -298,7 +306,6 @@
     right: 0;
     bottom: 0;
     height: 60px;
-    width: calc(100% - 220px);
     padding: 14px 20px 14px 0;
     background: var(--color-bg-2);
     text-align: right;

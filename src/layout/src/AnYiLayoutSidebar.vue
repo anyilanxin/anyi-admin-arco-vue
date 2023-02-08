@@ -66,7 +66,7 @@
   useResponsive(true);
   const showLogo = computed(() => appStore.showLogo);
   const menuWidth = computed(() => {
-    return appStore.menuCollapse ? 48 : appStore.menuWidth;
+    return appStore.collapsed ? 48 : appStore.menuWidth;
   });
   const collapsed = computed(() => {
     return appStore.collapsed;
