@@ -56,11 +56,13 @@
             <icon-safe />
           </template>
           <template #append>
-            <a-image
-              :width="'100px'"
-              :height="'31px'"
-              src="@/assets/images/login-banner.png"
-            />
+            <a-image src="@/assets/images/picture_code_404.png" width="100px">
+              <template #error>
+                <div class="login-picture-error">
+                  <span>404</span>
+                </div>
+              </template>
+            </a-image>
           </template>
         </a-input>
       </a-form-item>
@@ -200,5 +202,20 @@
   :deep(.arco-input-append) {
     background-color: transparent !important;
     padding: 0px !important;
+  }
+  .login-picture-error {
+    text-align: center;
+    & > span {
+      font-weight: 800;
+      padding-left: 20px;
+      font-size: 1.8em;
+      letter-spacing: 7px;
+      background-image: linear-gradient(60deg, #119de2, #ff3a3a);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+  :deep(.arco-image-overlay) {
+    top: -6px;
   }
 </style>
