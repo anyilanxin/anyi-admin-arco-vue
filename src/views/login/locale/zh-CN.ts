@@ -6,6 +6,7 @@ export default {
   'login.form.login.success': '欢迎使用',
   'login.form.userName.placeholder': '用户名：admin',
   'login.form.password.placeholder': '密码：admin',
+  'login.form.pictureCode.placeholder': '图片验证码',
   'login.form.rememberPassword': '记住密码',
   'login.form.forgetPassword': '忘记密码',
   'login.form.login': '登录',

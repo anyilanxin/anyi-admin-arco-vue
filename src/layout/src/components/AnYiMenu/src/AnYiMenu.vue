@@ -52,13 +52,13 @@
     return appStore.accordion;
   });
   const theme = computed(() => {
+    console.log('-------appStore.menuTheme-------', appStore.menuTheme);
     return appStore.menuTheme === 'dark' ? 'dark' : 'light';
   });
   const findMenuOpenKeys = (target: string) => {
     const result: string[] = [];
     let isFind = false;
     const backtrack = (item: RouteRecordRaw, keys: string[]) => {
-      console.log('----item---------', item);
       if (item.path === target) {
         isFind = true;
         result.push(...keys);
@@ -77,7 +77,6 @@
     return result;
   };
   listenerRouteChange((newRoute) => {
-    console.log('------newRoute--------', newRoute);
     const { requiresAuth, activeMenu, hideInMenu } = newRoute.meta;
     if (requiresAuth && (!hideInMenu || activeMenu)) {
       const menuOpenKeys = findMenuOpenKeys(
@@ -86,7 +85,6 @@
 
       const keySet = new Set([...menuOpenKeys, ...openKeys.value]);
       openKeys.value = [...keySet];
-      console.log('-----openKeys.value-------', openKeys.value);
       selectedKey.value = [activeMenu || menuOpenKeys[menuOpenKeys.length - 1]];
     }
   }, true);

@@ -22,6 +22,7 @@ const setting: ProjectConfig = {
   contentWitdh: 'flow',
   lockScreen: 0,
   menuWidth: 220,
+  menuTheme: 'light',
   breadcrumb: true,
   breadcrumbIcon: true,
   tabBar: true,

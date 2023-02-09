@@ -41,6 +41,29 @@
           </template>
         </a-input-password>
       </a-form-item>
+      <a-form-item
+        field="pictureCode"
+        :rules="[{ required: true, message: $t('login.form.password.errMsg') }]"
+        :validate-trigger="['change', 'blur']"
+        hide-label
+      >
+        <a-input
+          v-model="userInfo.pictureCode"
+          :placeholder="$t('login.form.pictureCode.placeholder')"
+          allow-clear
+        >
+          <template #prefix>
+            <icon-safe />
+          </template>
+          <template #append>
+            <a-image
+              :width="'100px'"
+              :height="'37px'"
+              src="@/assets/images/login-banner.png"
+            />
+          </template>
+        </a-input>
+      </a-form-item>
       <a-space :size="16" direction="vertical">
         <div class="login-form-password-actions">
           <a-checkbox
@@ -84,10 +107,12 @@
     rememberPassword: true,
     username: 'admin', // 演示默认值
     password: 'admin', // demo default value
+    pictureCode: '',
   });
   const userInfo = reactive({
     username: loginConfig.value.username,
     password: loginConfig.value.password,
+    pictureCode: '',
   });
 
   const handleSubmit = async ({
@@ -131,7 +156,12 @@
 <style lang="less" scoped>
   .login-form {
     &-wrapper {
-      width: 320px;
+      margin-left: 40%;
+      background-color: #fff;
+      box-shadow: 1px 1px 10px 2px #ccc;
+      padding: 25px 25px 10px 25px;
+      width: 400px;
+      border-radius: 6px;
     }
 
     &-title {
@@ -161,5 +191,10 @@
     &-register-btn {
       color: var(--color-text-3) !important;
     }
+  }
+
+  body[arco-theme='dark'] .login-form-wrapper {
+    background-color: #222121 !important;
+    box-shadow: 1px 1px 10px 2px #171616 !important;
   }
 </style>

@@ -89,4 +89,10 @@
       }
     }
   }
+  .content {
+    background-image: url('/img/background.svg');
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-color: var(--color-bg-2);
+  }
 </style>

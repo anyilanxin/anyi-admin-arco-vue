@@ -22,6 +22,7 @@ export interface AppState {
   contentWitdh: string;
   lockScreen: number;
   menuWidth: number;
+  menuTheme: string;
   breadcrumb: boolean;
   breadcrumbIcon: boolean;
   tabBar: boolean;

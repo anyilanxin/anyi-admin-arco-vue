@@ -1477,17 +1477,17 @@ anyi-bpmn-js-color-picker@^0.5.4:
   dependencies:
     min-dom "^4.0.3"
 
-anyi-process-ee-arcovue@2.0.0-beta50:
-  version "2.0.0-beta50"
-  resolved "https://registry.yarnpkg.com/anyi-process-ee-arcovue/-/anyi-process-ee-arcovue-2.0.0-beta50.tgz#3c2cae8378dd41e25ceb47c77986d3df97157699"
-  integrity sha512-FbpYLLrHrMf8XcuoyrddsYNkyMIAw9u8jsO+RSU/BOngmauLN+u9dWuDOsSotaGOmP0Mrf3I3XSgsRWkEpi2xQ==
+anyi-process-ee-arcovue@2.0.0-beta51:
+  version "2.0.0-beta51"
+  resolved "https://registry.yarnpkg.com/anyi-process-ee-arcovue/-/anyi-process-ee-arcovue-2.0.0-beta51.tgz#d7f7015b4150260e23a2d8054149f803c312125f"
+  integrity sha512-cfjiWP9IqMKBhFN9k0EpB8UOlJgQDHzx/VYdPLXArldk1HKM1gGbFhpDsnmZbEScetqIUFpeFPZ5vLfeJ+y5Xg==
   dependencies:
     "@arco-design/web-vue" "^2.42.1"
     "@bpmn-io/properties-panel" "^1.3.0"
     "@highlightjs/vue-plugin" "^2.1.0"
     "@vueuse/core" "^9.12.0"
     anyi-bpmn-js-color-picker "^0.5.4"
-    bpmn-js "^11.2.0"
+    bpmn-js "^11.3.1"
     bpmn-js-bpmnlint "^0.20.0"
     bpmn-js-differ "^2.0.2"
     bpmn-js-properties-panel "^1.17.0"
@@ -1860,14 +1860,14 @@ bpmn-js-token-simulation@^0.31.0:
     min-dom "^4.0.3"
     randomcolor "^0.6.2"
 
-bpmn-js@^11.2.0:
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/bpmn-js/-/bpmn-js-11.2.0.tgz#46454169ee8b06f618166026ff0cbfddacf9cd84"
-  integrity sha512-LqHPsBym/rttUaC93fE54LbuRbev6UuH3Ko1REIVsnd46J3PEP9BuMi+wCv1i/jRAfTWTtp1ocia75V1Eje8uA==
+bpmn-js@^11.3.1:
+  version "11.3.1"
+  resolved "https://registry.yarnpkg.com/bpmn-js/-/bpmn-js-11.3.1.tgz#362b945690febd6e9257271c64db49b3b2f2eff5"
+  integrity sha512-sqIs2EBNnKnCkeN4/pQN4dCmZNDHp6cRbmbBgbI3RyMuQt8NhkuFlDQ5OIiFx9jhAaWPBoiz3yV4t8eXbgHTUQ==
   dependencies:
     bpmn-moddle "^8.0.0"
     css.escape "^1.5.1"
-    diagram-js "^11.8.0"
+    diagram-js "^11.9.0"
     diagram-js-direct-editing "^2.0.0"
     ids "^1.0.0"
     inherits-browser "^0.1.0"
@@ -2880,7 +2880,7 @@ diagram-js-minimap@^4.0.1:
     min-dom "^4.0.2"
     tiny-svg "^3.0.0"
 
-diagram-js@^11.8.0:
+diagram-js@^11.9.0:
   version "11.9.0"
   resolved "https://registry.yarnpkg.com/diagram-js/-/diagram-js-11.9.0.tgz#0632e19490fb8939324428987dc66ceeb3811630"
   integrity sha512-1SKhsTB05TtYkm7x4kGT37p5j87OaLvSz2rqyuM1ZzB9fkolrEXyeU+xgdzeq2QtAcg/mwyOnhlANVLGH8pRqQ==

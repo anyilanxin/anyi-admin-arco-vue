@@ -26,10 +26,10 @@
         @change="handleToggleTheme"
       >
         <template #checked>
-          <AnYiSvgIcon name="icon-setting-sun" class-name="anyi-dark-check" />
+          <icon-sun-fill />
         </template>
         <template #unchecked>
-          <AnYiSvgIcon name="icon-setting-moon" class-name="anyi-dark-check" />
+          <icon-moon-fill />
         </template>
       </a-switch>
     </div>
@@ -368,8 +368,5 @@
   }
   .anyi-dark-check-switch {
     text-align: center;
-    .anyi-dark-check {
-      vertical-align: -0.16em !important;
-    }
   }
 </style>
