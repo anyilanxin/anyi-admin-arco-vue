@@ -58,7 +58,7 @@
           <template #append>
             <a-image
               :width="'100px'"
-              :height="'37px'"
+              :height="'31px'"
               src="@/assets/images/login-banner.png"
             />
           </template>
