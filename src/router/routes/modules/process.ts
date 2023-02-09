@@ -91,6 +91,17 @@ const FORM: AppRouteRecordRaw = {
         // ignoreCache: true,
       },
     },
+    {
+      path: 'instance',
+      name: 'instance',
+      component: () => import('@/views/process/instance.vue'),
+      meta: {
+        locale: '流程实例',
+        requiresAuth: true,
+        roles: ['admin'],
+        // ignoreCache: true,
+      },
+    },
   ],
 };
 
