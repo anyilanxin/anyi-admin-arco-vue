@@ -197,4 +197,8 @@
     background-color: #222121 !important;
     box-shadow: 1px 1px 10px 2px #171616 !important;
   }
+  :deep(.arco-input-append) {
+    background-color: transparent !important;
+    padding: 0px !important;
+  }
 </style>
