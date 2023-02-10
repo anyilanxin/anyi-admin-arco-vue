@@ -1477,10 +1477,10 @@ anyi-bpmn-js-color-picker@^0.5.4:
   dependencies:
     min-dom "^4.0.3"
 
-anyi-process-ee-arcovue@2.0.0-beta51:
-  version "2.0.0-beta51"
-  resolved "https://registry.yarnpkg.com/anyi-process-ee-arcovue/-/anyi-process-ee-arcovue-2.0.0-beta51.tgz#d7f7015b4150260e23a2d8054149f803c312125f"
-  integrity sha512-cfjiWP9IqMKBhFN9k0EpB8UOlJgQDHzx/VYdPLXArldk1HKM1gGbFhpDsnmZbEScetqIUFpeFPZ5vLfeJ+y5Xg==
+anyi-process-ee-arcovue@2.0.0-beta52:
+  version "2.0.0-beta52"
+  resolved "https://registry.yarnpkg.com/anyi-process-ee-arcovue/-/anyi-process-ee-arcovue-2.0.0-beta52.tgz#49a7832e644ef736e265a6b732aa7203ed4cf041"
+  integrity sha512-XwA9QdEsZYgZRBltaHbtO4pPVuWY04YRTBslime9CfZOjYiMZN8KnyUQyOXmL7Qtdvk6/XMvgnxWXl2YOQZbaQ==
   dependencies:
     "@arco-design/web-vue" "^2.42.1"
     "@bpmn-io/properties-panel" "^1.3.0"
