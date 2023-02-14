@@ -219,6 +219,9 @@
       color: transparent;
     }
   }
+  .login-picture {
+    margin-left: 1px;
+  }
   :deep(.arco-image-overlay) {
     top: -6px;
   }
