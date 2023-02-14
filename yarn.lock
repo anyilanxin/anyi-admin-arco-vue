@@ -22,20 +22,6 @@
   dependencies:
     color "^3.1.3"
 
-"@arco-design/web-vue@^2.42.1":
-  version "2.42.1"
-  resolved "https://registry.yarnpkg.com/@arco-design/web-vue/-/web-vue-2.42.1.tgz#b64af8e1ac5704da70fe962e50aa54e5e2ac5703"
-  integrity sha512-zzXmayX/DIJiPuxIntj3KJrLe6VrFoX6ixpmbrLl7SAnoecGAMSXnaAy6sw0xOybrZid3ytYEzAuqTI/p9aOQw==
-  dependencies:
-    "@arco-design/color" "^0.4.0"
-    b-tween "^0.3.3"
-    b-validate "^1.3.1"
-    compute-scroll-into-view "^1.0.17"
-    dayjs "^1.10.3"
-    number-precision "^1.5.0"
-    resize-observer-polyfill "^1.5.1"
-    scroll-into-view-if-needed "^2.2.28"
-
 "@arco-design/web-vue@^2.43.0":
   version "2.43.0"
   resolved "https://registry.yarnpkg.com/@arco-design/web-vue/-/web-vue-2.43.0.tgz#9d15f94231f5bf70d2a47ab6d4cee0a6e6db07e0"
@@ -1477,12 +1463,12 @@ anyi-bpmn-js-color-picker@^0.5.4:
   dependencies:
     min-dom "^4.0.3"
 
-anyi-process-ee-arcovue@2.0.0-beta52:
-  version "2.0.0-beta52"
-  resolved "https://registry.yarnpkg.com/anyi-process-ee-arcovue/-/anyi-process-ee-arcovue-2.0.0-beta52.tgz#49a7832e644ef736e265a6b732aa7203ed4cf041"
-  integrity sha512-XwA9QdEsZYgZRBltaHbtO4pPVuWY04YRTBslime9CfZOjYiMZN8KnyUQyOXmL7Qtdvk6/XMvgnxWXl2YOQZbaQ==
+anyi-process-ee-arcovue@2.0.0-beta53:
+  version "2.0.0-beta53"
+  resolved "https://registry.yarnpkg.com/anyi-process-ee-arcovue/-/anyi-process-ee-arcovue-2.0.0-beta53.tgz#6cc551c7668dcf7bbb7d344867b3d786b8e2b8e3"
+  integrity sha512-L+o8BWQrKhVF4JvBLDcYBcDjqcT1eYOoRU1EMAVlj1lR19uv4WQm1QiQe00yngwlcXC/1usP/BXpij4QkdfoJQ==
   dependencies:
-    "@arco-design/web-vue" "^2.42.1"
+    "@arco-design/web-vue" "^2.43.0"
     "@bpmn-io/properties-panel" "^1.3.0"
     "@highlightjs/vue-plugin" "^2.1.0"
     "@vueuse/core" "^9.12.0"
