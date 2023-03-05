@@ -10,11 +10,11 @@
 </template>
 
 <script lang="ts" setup>
-  import { AnYiBpmnPreviewInstance } from 'anyi-process-ee-arcovue';
+  import { AnYiBpmnPreviewInstance } from 'anyi-process-ee-native-arcovue';
   import type {
     CreateHtmlFuncArgs,
     BpmnInstanceInfo,
-  } from 'anyi-process-ee-arcovue/dist/types/types/instance.d';
+  } from 'anyi-process-ee-native-arcovue/dist/types/types/instance.d';
   import useThemes from '@/hooks/themes';
   import { ref, onMounted, watch } from 'vue';
   import instancesdata from './instancesdata.json';
@@ -53,7 +53,7 @@
 </script>
 
 <style lang="less">
-  @import 'anyi-process-ee-arcovue/dist/style.css';
+  @import 'anyi-process-ee-native-arcovue/dist/style.css';
   @import 'bpmn-js/dist/assets/bpmn-font/css/bpmn.css';
   @import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-codes.css';
   @import 'bpmn-js/dist/assets/bpmn-font/css/bpmn-embedded.css';

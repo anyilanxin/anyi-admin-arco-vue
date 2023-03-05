@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { AnYiBpmnDesignerCamunda } from 'anyi-process-ee-arcovue';
+  import { AnYiBpmnDesignerCamunda } from 'anyi-process-ee-native-arcovue';
   import useThemes from '@/hooks/themes';
   import { ref, onMounted, watch } from 'vue';
 
@@ -41,7 +41,7 @@
 </script>
 
 <style lang="less">
-  @import 'anyi-process-ee-arcovue/dist/style.css';
+  @import 'anyi-process-ee-native-arcovue/dist/style.css';
   @import 'bpmn-js/dist/assets/diagram-js.css';
   @import 'anyi-bpmn-js-color-picker/colors/color-picker.css';
   @import 'bpmn-js/dist/assets/bpmn-font/css/bpmn.css';
@@ -52,4 +52,5 @@
   @import 'bpmn-js-token-simulation/assets/css/bpmn-js-token-simulation.css';
   @import 'diagram-js-minimap/assets/diagram-js-minimap.css';
   @import 'bpmn-js-bpmnlint/dist/assets/css/bpmn-js-bpmnlint.css';
+  @import '@bpmn-io/element-template-chooser/dist/element-template-chooser.css';
 </style>
