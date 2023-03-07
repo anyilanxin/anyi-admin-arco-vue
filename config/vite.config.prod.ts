@@ -19,6 +19,9 @@ export default mergeConfig(
       configImageminPlugin(),
     ],
     build: {
+      reportCompressedSize: false,
+      cssCodeSplit: true, // 如果设置为false，整个项目中的所有 CSS 将被提取到一个 CSS 文件中
+      chunkSizeWarningLimit: 2000,
       rollupOptions: {
         output: {
           manualChunks: (id: string) => {
@@ -36,7 +39,6 @@ export default mergeConfig(
           assetFileNames: `assets/[name].[hash].${timestamp}.[ext]`, // 用于输出静态资源的命名
         },
       },
-      chunkSizeWarningLimit: 2000,
     },
   },
   baseConfig
